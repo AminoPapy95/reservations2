@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('base')
 
 @section('title', 'Liste des roles')
 

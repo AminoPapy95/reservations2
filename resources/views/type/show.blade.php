@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('base')
 @section('title', 'Fiche d\'un type')
 
 @section('content')
@@ -8,7 +7,7 @@
 
         <h2>Liste des artistes</h2>
         <ul>
-        @foreach($type->artists as $artist)    
+        @foreach($type->artists as $artist)
             <li>{{ $artist->firstname }} {{ $artist->lastname }}</li>
         @endforeach
         </ul>

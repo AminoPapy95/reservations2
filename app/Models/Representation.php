@@ -33,7 +33,7 @@ class Representation extends Model
      * @var bool
      */
     public $timestamps = false;
-    
+
     /**
      * Get the actual location of the representation
      */
@@ -41,12 +41,17 @@ class Representation extends Model
     {
         return $this->belongsTo('App\Models\Location');
     }
-    
+
     /**
      * Get the show of the representation
      */
     public function show()
     {
         return $this->belongsTo('App\Models\Show');
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany('App\Models\User');
     }
 }

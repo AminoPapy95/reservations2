@@ -15,7 +15,7 @@ class Role extends Model
      * @var array
      */
     protected $fillable = [
-        'role', 
+        'role',
     ];
 
    /**
@@ -31,4 +31,9 @@ class Role extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    public function users()
+    {
+        return $this->hasMany('App\Models\User');
+    }
 }

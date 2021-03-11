@@ -1,15 +1,15 @@
-@extends('layouts.app')
+@extends('base')
 
 @section('title', 'Fiche d\'une représentation')
 
 @section('content')
 
     <article class="container">
-        
+
         <h1>Représentation du {{ $date }} à {{ $heure }}</h1>
         <p><strong>Spectacle:</strong> {{ $representation->show->title }}</p>
 
-        <p><strong>Lieu:</strong> 
+        <p><strong>Lieu:</strong>
         @if($representation->location)
         {{ $representation->location->designation }}
         @elseif($representation->show->location)

@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('base')
 @section('title', 'Liste des types d\'utilisateurs')
 
 @section('content')

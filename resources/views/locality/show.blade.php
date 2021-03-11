@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('base')
 
 @section('title', 'La localité')
 
@@ -13,7 +13,7 @@
         @foreach($locality->Location as $location)
 
             <li>{{ $location->designation }}</li>
-            
+
         @endforeach
         </ul>
     </div>

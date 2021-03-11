@@ -21,7 +21,7 @@ class ArtistTypeTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
         DB::table('artist_type')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
-        
+
         //Define data
         $artistTypes = [
             [
@@ -125,7 +125,7 @@ class ArtistTypeTableSeeder extends Seeder
                 'type'=>'comédien',
             ],
         ];
-        
+
         //Insert data in the table
         foreach ($artistTypes as $data) {
             $artist = Artist::where([
@@ -134,7 +134,7 @@ class ArtistTypeTableSeeder extends Seeder
             ])->first();
 
             $type = Type::firstWhere('type',$data['type']);
-            
+
             DB::table('artist_type')->insert([
                 'artist_id' => $artist->id,
                 'type_id' => $type->id,
